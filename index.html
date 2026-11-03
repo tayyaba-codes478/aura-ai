@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura AI | Your Intelligent Space</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+            <span>Aura<span class="brand-light"> AI</span></span>
+            <button class="close-sidebar" id="closeSidebar">×</button>
+        </div>
+
+        <button class="new-chat" id="newChat">
+            <span>＋</span> New Chat
+        </button>
+
+        <div class="side-label">WORKSPACE</div>
+
+        <button class="side-link active" id="homeButton">
+            <span>⌂</span> Home
+        </button>
+
+        <button class="side-link" id="historyButton">
+            <span>◷</span> Chat History
+        </button>
+
+        <div class="history-heading">
+            <span>RECENT CHATS</span>
+            <button id="clearHistory" title="Clear history">···</button>
+        </div>
+
+        <div class="history-list" id="historyList"></div>
+
+        <div class="sidebar-bottom">
+            <div class="user-card">
+                <div class="avatar">T</div>
+                <div class="user-info">
+                    <strong>Tayyaba</strong>
+                    <span>Personal Workspace</span>
+                </div>
+                <span class="online-dot"></span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="main">
+
+        <header class="topbar">
+            <div class="top-left">
+                <button class="menu-btn" id="menuButton">☰</button>
+                <span class="workspace-label">Personal Workspace</span>
+                <span class="top-divider">/</span>
+                <span class="current-page">AI Assistant</span>
+            </div>
+
+            <div class="top-actions">
+                <span class="status"><i></i> Demo Mode</span>
+                <button class="theme-btn" id="themeButton" title="Toggle theme">☼</button>
+            </div>
+        </header>
+
+        <section class="chat-area" id="chatArea">
+
+            <!-- WELCOME SCREEN -->
+            <div class="welcome-screen" id="welcomeScreen">
+                <div class="welcome-orb">
+                    <div class="orb-inner">✦</div>
+                </div>
+
+                <div class="welcome-tag">YOUR PERSONAL AI SPACE</div>
+
+                <h1>Ideas begin with<br><span>Aura.</span></h1>
+
+                <p class="welcome-description">
+                    A space to think, create, explore and turn your ideas into something amazing.
+                </p>
+
+                <div class="suggestion-grid">
+                    <button class="suggestion-card" data-prompt="Give me some creative website project ideas.">
+                        <span class="suggestion-icon purple">✧</span>
+                        <span>
+                            <strong>Creative Ideas</strong>
+                            <small>Explore something new</small>
+                        </span>
+                        <b>↗</b>
+                    </button>
+
+                    <button class="suggestion-card" data-prompt="Help me write a professional introduction.">
+                        <span class="suggestion-icon blue">✎</span>
+                        <span>
+                            <strong>Writing Assistant</strong>
+                            <small>Make your words better</small>
+                        </span>
+                        <b>↗</b>
+                    </button>
+
+                    <button class="suggestion-card" data-prompt="Explain JavaScript in a beginner-friendly way.">
+                        <span class="suggestion-icon pink">⌘</span>
+                        <span>
+                            <strong>Learn Something</strong>
+                            <small>Understand new concepts</small>
+                        </span>
+                        <b>↗</b>
+                    </button>
+
+                    <button class="suggestion-card" data-prompt="Give me a simple productivity plan for today.">
+                        <span class="suggestion-icon cyan">◷</span>
+                        <span>
+                            <strong>Stay Productive</strong>
+                            <small>Plan your next move</small>
+                        </span>
+                        <b>↗</b>
+                    </button>
+                </div>
+            </div>
+
+            <!-- MESSAGES -->
+            <div class="messages" id="messages"></div>
+
+        </section>
+
+        <!-- INPUT AREA -->
+        <footer class="composer-area">
+            <form class="composer" id="chatForm">
+                <textarea id="messageInput" rows="1"
+                    placeholder="Message Aura AI..."></textarea>
+
+                <div class="composer-bottom">
+                    <span class="input-hint">✦ Aura can make mistakes. Check important information.</span>
+                    <button type="submit" class="send-button" id="sendButton">
+                        <span>↑</span>
+                    </button>
+                </div>
+            </form>
+            <p class="footer-note">Made for ideas, creativity and possibilities.</p>
+        </footer>
+
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
